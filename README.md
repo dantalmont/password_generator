@@ -10,3 +10,5 @@ Key Features:
 -They are given the option to choose different options they would like such as: uppercase letters, lowercase letters, and/or numbers.
 
 -At the end of the prompts there will be an alert window with the new password.
+
+https://dantalmont.github.io/password_generator/
