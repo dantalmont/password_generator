@@ -4,18 +4,16 @@
 
 
 
+//setting variables
+var passLengthEl; ; 
+var lowercaseEl; 
+var uppercaseEl; 
+var numbersEl; 
+var symbolEl; 
+var newPassEl = document.createElement("h2");
 
-var passLengthEl; //= parseInt(prompt("how many characters long would you like your new password? Choose between 8 and 128.")); 
-var lowercaseEl; //= confirm("would you like to include lowercase letters?");
-var uppercaseEl; //= confirm("would you like to include uppercase letters?");
-var numbersEl; //= confirm("Would you like to include numbers?");
-var symbolEl; //= confirm("Last question: would you like special characters?");
-var newPassEl; //= document.querySelector("password");
-
-confirm("would you like to use this password generator?")
-
-
-function makeid(length) {
+// set up functions for selected randomized criteria
+function low(length) {
     var result           = '';
     var characters       = 'abcdefghijklmnopqrstuvwxyz';
     var charactersLength = characters.length;
@@ -24,7 +22,7 @@ function makeid(length) {
     }
     return result;
  }
- function makeid2(length) {
+ function up(length) {
     var result           = '';
     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var charactersLength = characters.length;
@@ -33,7 +31,7 @@ function makeid(length) {
     }
     return result;
  }
- function makeid3(length) {
+ function num(length) {
     var result           = '';
     var characters       = '0123456789';
     var charactersLength = characters.length;
@@ -42,7 +40,7 @@ function makeid(length) {
     }
     return result;
  }
- function makeid4(length) {
+ function lowUpNum(length) {
     var result           = '';
     var characters       = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     var charactersLength = characters.length;
@@ -51,7 +49,7 @@ function makeid(length) {
     }
     return result;
  }
- function makeid5(length) {
+ function lowUp(length) {
     var result           = '';
     var characters       = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var charactersLength = characters.length;
@@ -60,7 +58,7 @@ function makeid(length) {
     }
     return result;
  }
- function makeid6(length) {
+ function upNum(length) {
     var result           = '';
     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     var charactersLength = characters.length;
@@ -69,7 +67,7 @@ function makeid(length) {
     }
     return result;
  }
- function makeid7(length) {
+ function lowNum(length) {
     var result           = '';
     var characters       = 'abcdefghijklmnopqrstuvwxyz0123456789';
     var charactersLength = characters.length;
@@ -101,32 +99,37 @@ function generatePassword () {
 
     // 3 choices========================================== 
     else if ( lowercaseEl && uppercaseEl && numbersEl ) {
-        alert(makeid4(passLengthEl));
+        alert(lowUpNum(passLengthEl));
     }
 
     // 2 choices================================
     else if ( lowercaseEl && uppercaseEl ) {
-        alert(makeid5(passLengthEl));
+        alert(lowUp(passLengthEl));
     }
     else if ( lowercaseEl  && numbersEl ) {
-        alert(makeid7(passLengthEl));
+        alert(lowNum(passLengthEl));
     }
     else if ( uppercaseEl && numbersEl ) {
-        alert(makeid6(passLengthEl));
+        alert(upNum(passLengthEl));
     }
     
     // 1 choice==============================
     else if ( lowercaseEl ) {
-        alert(makeid(passLengthEl))
+        alert(low(passLengthEl))
     }
     else if ( uppercaseEl ) {
-        alert(makeid2(passLengthEl))
+        alert(up(passLengthEl))
     }
     else if ( numbersEl ) {
-        alert(makeid3(passLengthEl))
-    }
-   
+        alert(num(passLengthEl));
+    }  
  }
 
-    generatePassword();
+//call function
+generatePassword();
+
+      
+
+    
+
  
