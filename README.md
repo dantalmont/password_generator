@@ -7,7 +7,7 @@ Key Features:
 ---------------------------------------------------------------------------------
 -The user can choose the length of their password: between 8 - 128 characters.
 
--They are given the option to choose different options they would like such as: uppercase letters, lowercase letters, and/or numbers.
+-They are given the option to choose different options they would like such as: uppercase letters, lowercase letters, numbers, and/or symbols.
 
 -At the end of the prompts there will be an alert window with the new password.
 
